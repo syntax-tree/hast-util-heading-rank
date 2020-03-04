@@ -5,6 +5,8 @@ var h = require('hastscript')
 var rank = require('.')
 
 test('rank', function(t) {
+  t.equal(rank(), null, 'should return null for non-nodes')
+
   t.equal(
     rank({type: 'text', value: '!'}),
     null,
