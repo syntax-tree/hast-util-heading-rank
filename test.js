@@ -1,21 +1,19 @@
-'use strict'
+import test from 'tape'
+import {h} from 'hastscript'
+import {headingRank} from './index.js'
 
-var test = require('tape')
-var h = require('hastscript')
-var rank = require('.')
-
-test('rank', function (t) {
-  t.equal(rank(), null, 'should return null for non-nodes')
+test('headingRank', function (t) {
+  t.equal(headingRank(), null, 'should return null for non-nodes')
 
   t.equal(
-    rank({type: 'text', value: '!'}),
+    headingRank({type: 'text', value: '!'}),
     null,
     'should return null for non-elements'
   )
 
-  t.equal(rank(h('p', '!')), null, 'should return null for non-headings')
+  t.equal(headingRank(h('p', '!')), null, 'should return null for non-headings')
 
-  t.equal(rank(h('h5', '!')), 5, 'should return the rank of a heading')
+  t.equal(headingRank(h('h5', '!')), 5, 'should return the rank of a heading')
 
   t.end()
 })

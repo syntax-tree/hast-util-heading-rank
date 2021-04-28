@@ -1,9 +1,5 @@
-'use strict'
-
-module.exports = headingRank
-
 // Rank of a heading: H1 -> 1, H2 -> 2, etc.
-function headingRank(node) {
+export function headingRank(node) {
   var name =
     (node && node.type === 'element' && node.tagName.toLowerCase()) || ''
   var code =
