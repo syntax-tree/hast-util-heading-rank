@@ -3,9 +3,11 @@ import {h} from 'hastscript'
 import {headingRank} from './index.js'
 
 test('headingRank', function (t) {
+  // @ts-ignore runtime.
   t.equal(headingRank(), null, 'should return null for non-nodes')
 
   t.equal(
+    // @ts-ignore runtime.
     headingRank({type: 'text', value: '!'}),
     null,
     'should return null for non-elements'

@@ -1,4 +1,13 @@
-// Rank of a heading: H1 -> 1, H2 -> 2, etc.
+/**
+ * @typedef {import('hast').Element} HastElement
+ */
+
+/**
+ * Rank of a heading: H1 -> 1, H2 -> 2, etc.
+ *
+ * @param {HastElement} node
+ * @returns {number|null}
+ */
 export function headingRank(node) {
   var name =
     (node && node.type === 'element' && node.tagName.toLowerCase()) || ''
