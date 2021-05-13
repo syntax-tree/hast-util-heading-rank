@@ -1,11 +1,13 @@
 /**
- * @typedef {import('hast').Element} HastElement
+ * @typedef {import('hast').Parent} Parent
+ * @typedef {import('hast').Root} Root
+ * @typedef {Root|Parent['children'][number]} Node
  */
 
 /**
  * Rank of a heading: H1 -> 1, H2 -> 2, etc.
  *
- * @param {HastElement} node
+ * @param {Node} node
  * @returns {number|null}
  */
 export function headingRank(node) {
