@@ -1,7 +1,6 @@
 /**
- * @typedef {import('hast').Parent} Parent
  * @typedef {import('hast').Root} Root
- * @typedef {Root|Parent['children'][number]} Node
+ * @typedef {Root|Root['children'][number]} Node
  */
 
 /**
