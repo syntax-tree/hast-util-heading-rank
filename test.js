@@ -2,7 +2,7 @@ import test from 'tape'
 import {h} from 'hastscript'
 import {headingRank} from './index.js'
 
-test('headingRank', function (t) {
+test('headingRank', (t) => {
   // @ts-ignore runtime.
   t.equal(headingRank(), null, 'should return null for non-nodes')
 

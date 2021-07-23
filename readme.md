@@ -24,11 +24,11 @@ npm install hast-util-heading-rank
 ## Use
 
 ```js
-var h = require('hastscript')
-var rank = require('hast-util-heading-rank')
+import {h} from 'hastscript'
+import {headingRank} from 'hast-util-heading-rank'
 
-rank(h('p', 'Alpha')) //=> null
-rank(h('h5', 'Alpha')) //=> 5
+headingRank(h('p', 'Alpha')) //=> null
+headingRank(h('h5', 'Alpha')) //=> 5
 ```
 
 ## API

@@ -10,9 +10,9 @@
  * @returns {number|null}
  */
 export function headingRank(node) {
-  var name =
+  const name =
     (node && node.type === 'element' && node.tagName.toLowerCase()) || ''
-  var code =
+  const code =
     name.length === 2 && name.charCodeAt(0) === 104 /* `h` */
       ? name.charCodeAt(1)
       : 0
