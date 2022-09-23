@@ -11,7 +11,7 @@
  */
 export function headingRank(node) {
   const name =
-    (node && node.type === 'element' && node.tagName.toLowerCase()) || ''
+    (node && node.type === 'element' && node.tagName && node.tagName.toLowerCase()) || ''
   const code =
     name.length === 2 && name.charCodeAt(0) === 104 /* `h` */
       ? name.charCodeAt(1)
