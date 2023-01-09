@@ -8,8 +8,7 @@
 [![Backers][backers-badge]][collective]
 [![Chat][chat-badge]][chat]
 
-[hast][] utility to transform to get the rank (also known as depth or level) of
-headings.
+[hast][] utility to get the rank (also known as depth or level) of headings.
 
 ## Contents
 
@@ -28,8 +27,8 @@ headings.
 
 ## What is this?
 
-This package is a utility that lets you get the rank (`1..6`) of heading
-elements (`h1..h6`).
+This package is a utility that lets you get the rank (`1`, `6`) of heading
+elements (`h1`, `h6`).
 
 ## When should I use this?
 
@@ -42,7 +41,7 @@ To change heading ranks, use
 ## Install
 
 This package is [ESM only][esm].
-In Node.js (version 12.20+, 14.14+, 16.0+, or 18.0+), install with [npm][]:
+In Node.js (version 14.14+ and 16.0+), install with [npm][]:
 
 ```sh
 npm install hast-util-heading-rank
@@ -74,7 +73,7 @@ headingRank(h('h5', 'Alpha')) //=> 5
 
 ## API
 
-This package exports the identifier `headingRank`.
+This package exports the identifier [`headingRank`][headingrank].
 There is no default export.
 
 ### `headingRank(node)`
@@ -83,7 +82,8 @@ Get the rank (`1` to `6`) of headings (`h1` to `h6`).
 
 ###### Parameters
 
-*   `node` ([`Node`][node]) — node to check
+*   `node` ([`Node`][node])
+    — node to check
 
 ###### Returns
 
@@ -98,7 +98,7 @@ It exports no additional types.
 
 Projects maintained by the unified collective are compatible with all maintained
 versions of Node.js.
-As of now, that is Node.js 12.20+, 14.14+, 16.0+, and 18.0+.
+As of now, that is Node.js 14.14+ and 16.0+.
 Our projects sometimes work with older versions, but this is not guaranteed.
 
 ## Security
@@ -182,3 +182,5 @@ abide by its terms.
 [xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
 
 [hast-util-shift-heading]: https://github.com/syntax-tree/hast-util-shift-heading
+
+[headingrank]: #headingranknode
