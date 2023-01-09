@@ -1,13 +1,18 @@
 /**
  * @typedef {import('hast').Root} Root
- * @typedef {Root|Root['children'][number]} Node
+ * @typedef {import('hast').Content} Content
  */
 
+/**
+ * @typedef {Root | Content} Node
+ */
+
+// To do next major: return `undefined`.
 /**
  * Rank of a heading: H1 -> 1, H2 -> 2, etc.
  *
  * @param {Node} node
- * @returns {number|null}
+ * @returns {number | null}
  */
 export function headingRank(node) {
   const name =
