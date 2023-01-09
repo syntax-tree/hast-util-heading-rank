@@ -1,20 +1,27 @@
-import test from 'tape'
+import assert from 'node:assert/strict'
+import test from 'node:test'
 import {h} from 'hastscript'
 import {headingRank} from './index.js'
 
-test('headingRank', (t) => {
+test('headingRank', () => {
   // @ts-expect-error runtime.
-  t.equal(headingRank(), null, 'should return null for non-nodes')
+  assert.equal(headingRank(), null, 'should return null for non-nodes')
 
-  t.equal(
+  assert.equal(
     headingRank({type: 'text', value: '!'}),
     null,
     'should return null for non-elements'
   )
 
-  t.equal(headingRank(h('p', '!')), null, 'should return null for non-headings')
+  assert.equal(
+    headingRank(h('p', '!')),
+    null,
+    'should return null for non-headings'
+  )
 
-  t.equal(headingRank(h('h5', '!')), 5, 'should return the rank of a heading')
-
-  t.end()
+  assert.equal(
+    headingRank(h('h5', '!')),
+    5,
+    'should return the rank of a heading'
+  )
 })
