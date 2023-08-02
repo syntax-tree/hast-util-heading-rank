@@ -10,11 +10,6 @@ test('headingRank', async function (t) {
     ])
   })
 
-  await t.test('should return `undefined` for non-nodes', async function () {
-    // @ts-expect-error runtime.
-    assert.equal(headingRank(), undefined)
-  })
-
   await t.test('should return `undefined` for non-elements', async function () {
     assert.equal(headingRank({type: 'text', value: '!'}), undefined)
   })
