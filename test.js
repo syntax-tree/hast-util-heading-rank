@@ -10,17 +10,17 @@ test('headingRank', async function (t) {
     ])
   })
 
-  await t.test('should return null for non-nodes', async function () {
+  await t.test('should return `undefined` for non-nodes', async function () {
     // @ts-expect-error runtime.
-    assert.equal(headingRank(), null)
+    assert.equal(headingRank(), undefined)
   })
 
-  await t.test('should return null for non-elements', async function () {
-    assert.equal(headingRank({type: 'text', value: '!'}), null)
+  await t.test('should return `undefined` for non-elements', async function () {
+    assert.equal(headingRank({type: 'text', value: '!'}), undefined)
   })
 
-  await t.test('should return null for non-headings', async function () {
-    assert.equal(headingRank(h('p', '!')), null)
+  await t.test('should return `undefined` for non-headings', async function () {
+    assert.equal(headingRank(h('p', '!')), undefined)
   })
 
   await t.test('should return the rank of a heading', async function () {

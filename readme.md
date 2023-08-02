@@ -67,7 +67,7 @@ In browsers with [`esm.sh`][esmsh]:
 import {h} from 'hastscript'
 import {headingRank} from 'hast-util-heading-rank'
 
-headingRank(h('p', 'Alpha')) //=> null
+headingRank(h('p', 'Alpha')) //=> undefined
 headingRank(h('h5', 'Alpha')) //=> 5
 ```
 
@@ -87,7 +87,7 @@ Get the rank (`1` to `6`) of headings (`h1` to `h6`).
 
 ###### Returns
 
-Rank of the heading or `null` if not a heading (`number?`).
+Rank of the heading or `undefined` if not a heading (`number | undefined`).
 
 ## Types
 
