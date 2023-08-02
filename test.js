@@ -1,13 +1,14 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import {h} from 'hastscript'
-import {headingRank} from './index.js'
+import {headingRank} from 'hast-util-heading-rank'
 
 test('headingRank', async function (t) {
   await t.test('should expose the public api', async function () {
-    assert.deepEqual(Object.keys(await import('./index.js')).sort(), [
-      'headingRank'
-    ])
+    assert.deepEqual(
+      Object.keys(await import('hast-util-heading-rank')).sort(),
+      ['headingRank']
+    )
   })
 
   await t.test('should return `undefined` for non-elements', async function () {
