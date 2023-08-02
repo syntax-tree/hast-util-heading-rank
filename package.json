@@ -35,12 +35,12 @@
     "index.js"
   ],
   "dependencies": {
-    "@types/hast": "^2.0.0"
+    "@types/hast": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
     "c8": "^8.0.0",
-    "hastscript": "^7.0.0",
+    "hastscript": "^8.0.0",
     "prettier": "^3.0.0",
     "remark-cli": "^11.0.0",
     "remark-preset-wooorm": "^9.0.0",
