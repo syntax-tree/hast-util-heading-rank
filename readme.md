@@ -50,14 +50,14 @@ npm install hast-util-heading-rank
 In Deno with [`esm.sh`][esmsh]:
 
 ```js
-import {headingRank} from 'https://esm.sh/hast-util-heading-rank@2'
+import {headingRank} from 'https://esm.sh/hast-util-heading-rank@3'
 ```
 
 In browsers with [`esm.sh`][esmsh]:
 
 ```html
 <script type="module">
-  import {headingRank} from 'https://esm.sh/hast-util-heading-rank@2?bundle'
+  import {headingRank} from 'https://esm.sh/hast-util-heading-rank@3?bundle'
 </script>
 ```
 
